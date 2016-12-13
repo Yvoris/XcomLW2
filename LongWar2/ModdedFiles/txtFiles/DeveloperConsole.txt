@@ -1,0 +1,23 @@
+DESCRIPTION=Enables Console and Developer's Shell for XCOM Enemy Within
+
+UPK_FILE=Engine.upk
+
+{ Expand function IsConsoleAllowed }
+EXPAND_FUNCTION=Engine.IsConsoleAllowed:72
+
+FUNCTION=Engine.IsConsoleAllowed
+
+{ New virtual size }
+REL_OFFSET=0x28
+[MODDED_HEX]
+0D
+
+{ Return true and ReturnValue }
+REL_OFFSET=0x30
+[MODDED_HEX]
+04 27 04 3A 84 03 00 00
+
+{ Function's flags }
+REL_OFFSET=0x3C
+[MODDED_HEX]
+02 01 02 
